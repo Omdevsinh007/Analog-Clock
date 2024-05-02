@@ -1,0 +1,85 @@
+* {
+    background-color: white;
+}
+#main {
+    display: flex;
+    justify-content: center;
+    margin-top: 110px;
+}
+#clock {
+    position: relative;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom right, #ffebe3, #FE7838);
+    top: 10%;
+    border: 10px solid white;
+    transition: 0.5s linear;
+    animation: effect 3s linear infinite;
+}
+@keyframes effect {
+    0% {
+        box-shadow: inset 0px -2px 2px rgba(0, 0, 0, 0.4);
+    }
+    25% {
+        box-shadow: inset 2px 0px 2px rgba(0, 0, 0, 0.4);
+    }
+    50% {
+        box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.4);
+    }
+    75% {
+        box-shadow: inset -2px 0px 2px rgba(0, 0, 0, 0.4);
+    }
+    100% {
+        box-shadow: inset 0px -2px 2px rgba(0, 0, 0, 0.4);
+    }
+}
+#hour {
+    position: absolute;
+    height: 110px;
+    width: 10px;
+    z-index: 2;
+    top: 28%;
+    transform-origin: bottom;
+}
+#minutes {
+    position: absolute;
+    height: 170px;
+    width: 10px;
+    top: 16%;
+    z-index: 1;
+    transform-origin: bottom;
+}
+#seconds {
+    position: absolute;
+    height: 230px;
+    width: 10px;
+    top: 4%;
+    transform-origin: bottom;
+}
+.stick {
+    left: 50%;
+    border-radius: 10px;
+    /* transition: 1s linear; */
+}
+@media (max-width: 600px) {
+    #clock {
+        height: 300px;
+        width: 300px;
+        transition: 0.5s linear;
+    }
+    #hour {
+        height: 65px;
+        transition: 1s linear;
+    }
+    #minutes {
+        height: 90px;
+        top: 20%;
+        transition: 1s linear;
+    }
+    #seconds {
+        height: 120px;
+        top: 9.5%;
+        transition: 1s linear;
+    }
+}
